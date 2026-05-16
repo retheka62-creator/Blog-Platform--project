@@ -98,13 +98,13 @@ This project helps in learning:
 * Template rendering
 * Responsive web design
 * Full-stack application development
-* 
+  
 ## Future Enhancements
 * Bookmark system
 * Search functionality
 * Image upload
 * Admin panel
 * Notifications
-* 
+  
 ## Author
 Developed as a full-stack web development project using Flask and SQLite.
