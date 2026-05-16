@@ -110,7 +110,7 @@ def create():
         ''', (
             request.form['title'],
             request.form['content'],
-            request.form['category'],
+            request.form['custom_category'] if request.form['category'] == 'Other' else request.form['category'],
             session['user_id']
         ))
 

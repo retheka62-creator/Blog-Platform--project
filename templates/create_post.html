@@ -14,14 +14,29 @@
            placeholder="Enter your story title..."
            required>
 
-    <select name="category" required>
-        <option value="">Select Category</option>
-        <option>Technology</option>
-        <option>Programming</option>
-        <option>AI</option>
-        <option>Education</option>
-        <option>Lifestyle</option>
-    </select>
+   <select name="category" id="categorySelect" onchange="showCustomCategory()" required>
+    <option value="">Select Category</option>
+    <option>Technology</option>
+    <option>Education</option>
+    <option>Business</option>
+    <option>Lifestyle</option>
+    <option>Health</option>
+    <option>Travel</option>
+    <option>Entertainment</option>
+    <option>Sports</option>
+    <option>Science</option>
+    <option>Finance</option>
+    <option>Food</option>
+    <option>News</option>
+    <option>Career</option>
+    <option>Other</option>
+</select>
+
+<input type="text"
+       id="customCategory"
+       name="custom_category"
+       placeholder="Enter custom category"
+       style="display:none;">
 
     <textarea name="content"
               placeholder="Start writing here..."

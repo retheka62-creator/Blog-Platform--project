@@ -13,3 +13,16 @@ window.onload = function() {
         document.body.classList.add("dark-mode");
     }
 }
+
+function showCustomCategory() {
+    const category = document.getElementById("categorySelect").value;
+    const customInput = document.getElementById("customCategory");
+
+    if(category === "Other") {
+        customInput.style.display = "block";
+        customInput.required = true;
+    } else {
+        customInput.style.display = "none";
+        customInput.required = false;
+    }
+}
