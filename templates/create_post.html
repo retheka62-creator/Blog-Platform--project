@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>Create Your Story</h1>
+    <p>Share your thoughts with the world</p>
+</section>
+
+<form method="POST" class="editor-form">
+
+    <input type="text"
+           name="title"
+           placeholder="Enter your story title..."
+           required>
+
+    <select name="category" required>
+        <option value="">Select Category</option>
+        <option>Technology</option>
+        <option>Programming</option>
+        <option>AI</option>
+        <option>Education</option>
+        <option>Lifestyle</option>
+    </select>
+
+    <textarea name="content"
+              placeholder="Start writing here..."
+              required></textarea>
+
+    <button type="submit">Publish Story</button>
+
+</form>
+
+{% endblock %}

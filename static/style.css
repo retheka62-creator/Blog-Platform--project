@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    transition: 0.4s;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #10b981;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.dark-btn {
+    background: #111827;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #111827, #10b981);
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Grid */
+.posts-grid {
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.post-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-8px);
+}
+
+.post-card h2,
+.post-card h3 {
+    margin-bottom: 14px;
+}
+
+.post-card p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* Forms */
+.editor-form,
+.auth-card {
+    width: 90%;
+    max-width: 700px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.editor-form input,
+.editor-form textarea,
+.editor-form select,
+.auth-card input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+}
+
+.editor-form textarea {
+    min-height: 250px;
+}
+
+button {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Auth */
+.auth-body {
+    background: linear-gradient(135deg, #111827, #10b981);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile */
+.profile-container {
+    width: 85%;
+    margin: 50px auto;
+}
+
+.profile-header {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #111827;
+    color: white;
+}
+
+.dark-mode .navbar,
+.dark-mode .post-card,
+.dark-mode .editor-form,
+.dark-mode .auth-card,
+.dark-mode .profile-header {
+    background: #1f2937;
+    color: white;
+}
+
+.dark-mode a {
+    color: white;
+}

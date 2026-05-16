@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>Publish Your Ideas to the World</h1>
+    <p>Write stories that inspire others</p>
+</section>
+
+<div class="posts-grid">
+
+{% for post in posts %}
+<div class="post-card">
+
+    <h2>{{ post.title }}</h2>
+
+    <p>{{ post.content[:150] }}...</p>
+
+    <br>
+
+    <small>By {{ post.username }}</small>
+
+    <br><br>
+
+    <a href="/post/{{ post.id }}">Read More</a>
+    <a href="/like/{{ post.id }}"> ❤️ {{ post.like_count }}</a>
+
+</div>
+{% endfor %}
+
+</div>
+
+{% endblock %}

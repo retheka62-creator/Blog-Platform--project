@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="editor-form">
+
+    <h1>{{ post.title }}</h1>
+
+    <br>
+
+    <p>
+        By <strong>{{ post.username }}</strong>
+    </p>
+
+    <br><hr><br>
+
+    <p style="line-height: 1.8;">
+        {{ post.content }}
+    </p>
+
+    <br><br>
+
+    <h2>Comments</h2>
+
+    <form method="POST">
+
+        <textarea name="comment"
+                  placeholder="Write your comment..."
+                  required></textarea>
+
+        <button type="submit">Post Comment</button>
+
+    </form>
+
+    <br>
+
+    {% for comment in comments %}
+    <div class="post-card">
+
+        <strong>{{ comment.username }}</strong>
+
+        <br><br>
+
+        <p>{{ comment.comment }}</p>
+
+    </div>
+    <br>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

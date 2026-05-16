@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSphere</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">BlogSphere</div>
+
+    <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/create">Write</a>
+        <a href="/profile">Profile</a>
+        <button class="dark-btn" onclick="toggleDarkMode()">🌙</button>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

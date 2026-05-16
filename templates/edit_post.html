@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>Edit Story</h1>
+</section>
+
+<form method="POST" class="editor-form">
+
+    <input type="text"
+           name="title"
+           value="{{ post.title }}"
+           required>
+
+    <textarea name="content"
+              required>{{ post.content }}</textarea>
+
+    <button type="submit">Update Story</button>
+
+</form>
+
+{% endblock %}
